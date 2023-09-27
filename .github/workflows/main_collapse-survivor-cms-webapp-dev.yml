@@ -65,3 +65,7 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F0251EDC95046C0B5EC2961043EF8BE }}
           package: .
+      - name: run command after deployemt
+        run: |
+             yarn install     
+             yarn develop
