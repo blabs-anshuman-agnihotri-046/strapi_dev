@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - collapse-survivor-cms-weba
 on:
   push:
     branches:
-      - main
+      - fixes1
   workflow_dispatch:
 
 jobs:
