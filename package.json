@@ -7,7 +7,6 @@
     "develop": "strapi develop",
     "start": "node node_modules/@strapi/strapi/bin/strapi.js start",
     "build": "strapi build",
-    "build:dev": "NODE_ENV=production strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {
