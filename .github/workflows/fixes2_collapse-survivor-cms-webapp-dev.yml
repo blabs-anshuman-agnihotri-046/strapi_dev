@@ -2,7 +2,7 @@ name: cms to Azure Web App - collapse-survivor-cms-webapp-dev
 
 on:
   push:
-  branches:
+    branches:
       - pipeline_updated
   workflow_dispatch:
     inputs:
