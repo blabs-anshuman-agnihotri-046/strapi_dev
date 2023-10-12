@@ -1,9 +1,6 @@
 name: collapse-survivor-cms-webapp-dev
 
 on:
-  push:
-    branches:
-      - staging
   workflow_dispatch:
     inputs:
       choice:
