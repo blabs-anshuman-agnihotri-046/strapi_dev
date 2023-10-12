@@ -6,7 +6,7 @@ name: cs_strapi cms to Azure Web App - collapse-survivor-cms-webapp-dev
 on:
   # push:
   #   branches:
-  #     - pipeline_env
+  #     - pipeline_env 
   workflow_dispatch:
     inputs:
       environment:
