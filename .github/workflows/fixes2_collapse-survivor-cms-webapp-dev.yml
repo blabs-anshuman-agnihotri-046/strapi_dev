@@ -1,4 +1,4 @@
-name: cs-strapi cms to Azure Web App - collapse-survivor-cms-webapp-dev
+name: cms to Azure Web App - collapse-survivor-cms-webapp-dev
 
 on:
   workflow_dispatch:
