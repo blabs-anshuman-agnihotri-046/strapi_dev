@@ -4,12 +4,13 @@
 name: cs_strapi cms to Azure Web App - collapse-survivor-cms-webapp-dev
 
 on:
-  push:
-    branches:
-      - pipeline_env 
+  # push:
+  #   branches:
+  #     - pipeline_env 
   workflow_dispatch:
     inputs:
-      environment:
+      choices:
+        type: choice
         description: 'Select the environment to deploy to'
         required: true
         default: 'dev'
@@ -48,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: ${{ github.event.inputs.environment }}
+      name: ${{ github.event.inputs.choice }}
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -68,9 +69,9 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ github.event.inputs.environment == 'dev' && 'collapse-survivor-cms-webapp-dev' || 'collapse-survivor-cms-webapp-staging' }}
+          app-name: ${{ github.event.inputs.choice == 'dev' && 'collapse-survivor-cms-webapp-dev' || 'collapse-survivor-cms-webapp-staging' }}
           slot-name: 'Production'  # Use the same slot name for both environments
-          publish-profile: ${{ github.event.inputs.environment == 'dev' && secrets.AZUREAPPSERVICE_PUBLISHPROFILE_89DE5ADCFA1642148BA04B17D6041BD0 || secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: ${{ github.event.inputs.choice == 'dev' && secrets.AZUREAPPSERVICE_PUBLISHPROFILE_89DE5ADCFA1642148BA04B17D6041BD0 || secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: .
 
 
