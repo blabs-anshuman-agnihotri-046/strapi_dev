@@ -6,7 +6,8 @@ module.exports = ({ env }) => ({
           account: env("STORAGE_ACCOUNT"),
           accountKey: env("STORAGE_ACCOUNT_KEY"),
  //         serviceBaseURL: env("STORAGE_URL"), // optional
-          serviceBaseURL: 'https://csstrapistorage.blob.core.windows.net/strapicontainer',
+        //  serviceBaseURL: 'https://csstrapistorage.blob.core.windows.net/strapicontainer',
+           serviceBaseURL: 'https://stagingstrapistorage.blob.core.windows.net/strapistorage',  
           containerName: env("STORAGE_CONTAINER_NAME"),
 //          defaultPath: "assets",
 //          cdnBaseURL: env("STORAGE_CDN_URL"), // optional

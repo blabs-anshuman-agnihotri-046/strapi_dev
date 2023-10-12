@@ -13,14 +13,16 @@ module.exports = [
             "blob:",
             "dl.airtable.com",
             "market-assets.strapi.io",
-            `csstrapistorage-secondary.z13.web.core.windows.net`,
+//           `csstrapistorage-secondary.z13.web.core.windows.net`,
+            'https://stagingstrapistorage.blob.core.windows.net/strapistorage',
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
             "dl.airtable.com",
-            `csstrapistorage-secondary.z13.web.core.windows.net`,
+        //    `csstrapistorage-secondary.z13.web.core.windows.net`,
+            'https://stagingstrapistorage.blob.core.windows.net/strapistorage',
 
           ],
           upgradeInsecureRequests: null,
