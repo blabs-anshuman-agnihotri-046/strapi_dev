@@ -5,6 +5,7 @@ module.exports = ({ env }) => ({
         providerOptions: {
           account: env("STORAGE_ACCOUNT"),
           accountKey: env("STORAGE_ACCOUNT_KEY"),
+          sasToken: env("STORAGE_ACCOUNT_SAS_TOKEN"),
  //         serviceBaseURL: env("STORAGE_URL"), // optional
           serviceBaseURL: 'https://csstrapistorage.blob.core.windows.net/strapicontainer',
           containerName: env("STORAGE_CONTAINER_NAME"),
